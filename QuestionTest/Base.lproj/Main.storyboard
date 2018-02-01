@@ -25,13 +25,13 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3SL-Sj-1a3">
                                 <rect key="frame" x="0.0" y="20" width="375" height="567"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Es esta una pregunta?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jud-UV-wdS">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Ves la naranja?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jud-UV-wdS">
                                         <rect key="frame" x="8" y="8" width="359" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LSk-ta-qyF">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="toronja" translatesAutoresizingMaskIntoConstraints="NO" id="LSk-ta-qyF">
                                         <rect key="frame" x="8" y="36.5" width="359" height="522.5"/>
                                     </imageView>
                                 </subviews>
@@ -46,17 +46,25 @@
                                     <constraint firstAttribute="trailing" secondItem="LSk-ta-qyF" secondAttribute="trailing" constant="8" id="r6q-8S-q5O"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3Sk-F3-2gJ">
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="like" translatesAutoresizingMaskIntoConstraints="NO" id="3Sk-F3-2gJ" userLabel="img_Si">
                                 <rect key="frame" x="0.0" y="587" width="187.5" height="80"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="zCm-2M-d5A"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Vn0-U5-wmq" appends="YES" id="PQ2-t2-5YE"/>
+                                </connections>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0Mg-3D-Shd">
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dislike" translatesAutoresizingMaskIntoConstraints="NO" id="0Mg-3D-Shd" userLabel="img_No">
                                 <rect key="frame" x="187" y="587" width="187.5" height="80"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="jc6-0Q-RIw"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="YjM-PL-Nfw" appends="YES" id="4K9-jW-LNa"/>
+                                </connections>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -73,10 +81,30 @@
                             <constraint firstItem="3Sk-F3-2gJ" firstAttribute="top" secondItem="3SL-Sj-1a3" secondAttribute="bottom" id="rta-uL-xd4"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="img_Example" destination="LSk-ta-qyF" id="oo3-VO-fHb"/>
+                        <outlet property="lbl_Pregunta" destination="jud-UV-wdS" id="MSP-YT-Ahs"/>
+                        <outlet property="vs_superView" destination="3SL-Sj-1a3" id="qdu-LS-wXO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="YjM-PL-Nfw" userLabel="tap_No">
+                    <connections>
+                        <action selector="doTap_No:" destination="BYZ-38-t0r" id="eOy-cE-vgr"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Vn0-U5-wmq" userLabel="tap_Si">
+                    <connections>
+                        <action selector="doTap_Si:" destination="BYZ-38-t0r" id="QEz-yl-ERZ"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="117.59999999999999" y="123.68815592203899"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="dislike" width="339" height="350"/>
+        <image name="like" width="334" height="358"/>
+        <image name="toronja" width="1000" height="1000"/>
+    </resources>
 </document>

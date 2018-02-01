@@ -14,6 +14,7 @@
 		85D3625420200098009316CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85D3625220200098009316CB /* LaunchScreen.storyboard */; };
 		85D3625F20200098009316CB /* QuestionTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D3625E20200098009316CB /* QuestionTestTests.swift */; };
 		85D3626A20200098009316CB /* QuestionTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D3626920200098009316CB /* QuestionTestUITests.swift */; };
+		85EF930620227C7E002A0E4C /* Preguntas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EF930520227C7E002A0E4C /* Preguntas.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		85D3626520200098009316CB /* QuestionTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuestionTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		85D3626920200098009316CB /* QuestionTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTestUITests.swift; sourceTree = "<group>"; };
 		85D3626B20200098009316CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85EF930520227C7E002A0E4C /* Preguntas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Preguntas.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				85D3625020200098009316CB /* Assets.xcassets */,
 				85D3625220200098009316CB /* LaunchScreen.storyboard */,
 				85D3625520200098009316CB /* Info.plist */,
+				85EF930520227C7E002A0E4C /* Preguntas.swift */,
 			);
 			path = QuestionTest;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 			files = (
 				85D3624C20200098009316CB /* ViewController.swift in Sources */,
 				85D3624A20200098009316CB /* AppDelegate.swift in Sources */,
+				85EF930620227C7E002A0E4C /* Preguntas.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -505,6 +509,7 @@
 				85D3627020200098009316CB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		85D3627120200098009316CB /* Build configuration list for PBXNativeTarget "QuestionTestTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +518,7 @@
 				85D3627320200098009316CB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		85D3627420200098009316CB /* Build configuration list for PBXNativeTarget "QuestionTestUITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +527,7 @@
 				85D3627620200098009316CB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
